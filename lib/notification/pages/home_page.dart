@@ -24,13 +24,13 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     _initializedNotification();
-    // FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-    //   print('forground message: ${message.notification?.title}');
-    //   _showNotification(
-    //     message.notification?.title,
-    //     message.notification?.body,
-    //   );
-    // });
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      print('forground message: ${message.notification?.title}');
+      _showNotification(
+        message.notification?.title,
+        message.notification?.body,
+      );
+    });
 
     FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {});
   }
