@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter_firebase_notification/home_page.dart';
+import 'package:flutter_firebase_notification/notification/pages/home_page.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 Future<void> _firebaseMessagingBackGroundHandler(RemoteMessage meassage) async {
@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Notification',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
