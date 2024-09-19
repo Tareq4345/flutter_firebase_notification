@@ -37,7 +37,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - data/key_data.json
+    - data/data.json
   # example:
   # fonts:
   #   - family: Schyler
